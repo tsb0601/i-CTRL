@@ -1,0 +1,35 @@
+# CUDA_VISIBLE_DEVICES=0 python main.py --cfg experiments/debug.yaml
+
+GPUS: (0,)
+LOG_DIR: 'logs/mnist'
+
+MODEL:
+  BACKBONE: 'dcgan'
+  NC: 1
+  NZ: 128
+  NGF: 64
+  NDF: 64
+  PCACOMP: 15
+  SAMPLE_N: 12
+  SAMPLE_K: 30
+
+
+TRAIN:
+  DATASET: "mnist"
+  BATCH_SIZE: 1000  # just for test, not for training
+  BATCH_SIZE_PER_GPU: 250
+  EPOCHS: 120
+  LAMBD: 10
+  LRG: 0.0001
+  LRD: 0.0001
+  BETA1: 0.5
+  N_ITER_GEN: 1
+  MODE: 1
+  CLASSI: 10
+  CLASSII: 10
+  EPS: 1.0
+  START_CLASS: 2
+  CLASS_PER_STEP: 2
+  REVIEW: True
+  NETD_CKPT: "./logs/multi2_mnist/checkpointsDISC/model-epoch2000.pt"
+  NETG_CKPT: "./logs/multi2_mnist/checkpointsGEN/model-epoch2000.pt"

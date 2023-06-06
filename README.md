@@ -39,11 +39,11 @@ The model and training configurations are as follows:
 - `EPOCHS`: Training Epochs per Incremental Task (default = 100)
 
 ### 4. Training
-If you want to MNIST, please use:
+If you want to train MNIST, please use:
 ```
 python main.py --cfg experiments/cifar10.yaml
 ```
-If you want to CIFAR-10, please use:
+If you want to train CIFAR-10, please use:
 ```
 python main.py --cfg experiments/mnist.yaml
 ```
